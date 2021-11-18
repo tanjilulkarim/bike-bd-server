@@ -32,7 +32,7 @@ async function run() {
       res.json(product);
     });
 
-    // add product
+    // add product //
     app.post("/products", async (req, res) => {
       const offer = req.body;
       const result = await ProductCollection.insertOne(offer);

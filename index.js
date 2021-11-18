@@ -69,7 +69,7 @@ async function run() {
         .toArray();
       res.send(result);
     });
-    //delete order from the database
+    //delete order 
     app.delete("/deleteOrders/:id", async (req, res) => {
       const result = await orderCollection.deleteOne({
         _id: ObjectId(req.params.id),
@@ -155,9 +155,9 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("running assignment-12 server");
+  res.send("Running bike server");
 });
 
 app.listen(port, () => {
-  console.log("running assignment-12 server", port);
+  console.log("Running bike server", port);
 });

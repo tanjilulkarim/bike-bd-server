@@ -32,7 +32,7 @@ async function run() {
       res.json(product);
     });
 
-    // add product //
+    // add product
     app.post("/products", async (req, res) => {
       const offer = req.body;
       const result = await ProductCollection.insertOne(offer);
@@ -46,7 +46,7 @@ async function run() {
       res.send(result);
     });
 
-    // get single product//
+    // get single product
     app.get("/product/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };

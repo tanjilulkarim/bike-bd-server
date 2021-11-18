@@ -46,7 +46,7 @@ async function run() {
       res.send(result);
     });
 
-    // get single product
+    // get single product//
     app.get("/product/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
